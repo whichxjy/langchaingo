@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo
+module github.com/ankit-arora/langchaingo
 
 go 1.22.0
 
