@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/url"
 
-	"github.com/tmc/langchaingo/embeddings"
+	"github.com/ankit-arora/langchaingo/embeddings"
 )
 
 const (

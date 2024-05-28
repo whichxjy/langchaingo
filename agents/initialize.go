@@ -1,8 +1,8 @@
 package agents
 
 import (
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/tools"
+	"github.com/ankit-arora/langchaingo/llms"
+	"github.com/ankit-arora/langchaingo/tools"
 )
 
 const _defaultMaxIterations = 5

@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/json-mode-example
+module github.com/ankit-arora/langchaingo/examples/json-mode-example
 
 go 1.22.0
 

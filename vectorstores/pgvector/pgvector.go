@@ -7,13 +7,13 @@ import (
 	"io"
 	"strings"
 
+	"github.com/ankit-arora/langchaingo/embeddings"
+	"github.com/ankit-arora/langchaingo/schema"
+	"github.com/ankit-arora/langchaingo/vectorstores"
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgconn"
 	"github.com/pgvector/pgvector-go"
-	"github.com/tmc/langchaingo/embeddings"
-	"github.com/tmc/langchaingo/schema"
-	"github.com/tmc/langchaingo/vectorstores"
 )
 
 const (

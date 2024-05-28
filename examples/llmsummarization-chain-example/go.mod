@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/llmsummarization-chain-example
+module github.com/ankit-arora/langchaingo/examples/llmsummarization-chain-example
 
 go 1.22.0
 

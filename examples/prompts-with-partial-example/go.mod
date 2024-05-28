@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/prompts-with-partial-example
+module github.com/ankit-arora/langchaingo/examples/prompts-with-partial-example
 
 go 1.22.0
 

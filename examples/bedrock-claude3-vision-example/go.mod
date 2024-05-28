@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/bedrock-claude3-vision-example
+module github.com/ankit-arora/langchaingo/examples/bedrock-claude3-vision-example
 
 go 1.22.0
 

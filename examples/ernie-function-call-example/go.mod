@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/ernie-function-call-example
+module github.com/ankit-arora/langchaingo/examples/ernie-function-call-example
 
 go 1.22.0
 

@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/mistral-summarization-example
+module github.com/ankit-arora/langchaingo/examples/mistral-summarization-example
 
 go 1.22.0
 

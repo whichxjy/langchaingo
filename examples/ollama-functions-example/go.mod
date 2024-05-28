@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/ollama-functions-example
+module github.com/ankit-arora/langchaingo/examples/ollama-functions-example
 
 go 1.22.0
 

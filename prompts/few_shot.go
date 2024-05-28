@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/tmc/langchaingo/llms"
+	"github.com/ankit-arora/langchaingo/llms"
 )
 
 var (

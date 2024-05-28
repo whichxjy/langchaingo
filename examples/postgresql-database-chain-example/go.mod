@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/postgresql-database-chain-example
+module github.com/ankit-arora/langchaingo/examples/postgresql-database-chain-example
 
 go 1.22.0
 

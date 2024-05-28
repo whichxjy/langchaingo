@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/llmmath-chain-example
+module github.com/ankit-arora/langchaingo/examples/llmmath-chain-example
 
 go 1.22.0
 

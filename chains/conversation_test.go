@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/ankit-arora/langchaingo/llms/openai"
+	"github.com/ankit-arora/langchaingo/memory"
 	"github.com/stretchr/testify/require"
-	"github.com/tmc/langchaingo/llms/openai"
-	"github.com/tmc/langchaingo/memory"
 )
 
 func TestConversation(t *testing.T) {

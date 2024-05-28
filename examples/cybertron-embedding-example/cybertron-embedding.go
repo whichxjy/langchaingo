@@ -7,13 +7,13 @@ import (
 	"os"
 	"strings"
 
+	"github.com/ankit-arora/langchaingo/embeddings"
+	"github.com/ankit-arora/langchaingo/embeddings/cybertron"
+	"github.com/ankit-arora/langchaingo/schema"
+	"github.com/ankit-arora/langchaingo/vectorstores"
+	"github.com/ankit-arora/langchaingo/vectorstores/weaviate"
 	"github.com/chewxy/math32"
 	"github.com/google/uuid"
-	"github.com/tmc/langchaingo/embeddings"
-	"github.com/tmc/langchaingo/embeddings/cybertron"
-	"github.com/tmc/langchaingo/schema"
-	"github.com/tmc/langchaingo/vectorstores"
-	"github.com/tmc/langchaingo/vectorstores/weaviate"
 )
 
 func cosineSimilarity(x, y []float32) float32 {

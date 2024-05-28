@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/ernie-chat-example
+module github.com/ankit-arora/langchaingo/examples/ernie-chat-example
 
 go 1.22.0
 

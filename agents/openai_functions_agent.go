@@ -5,11 +5,11 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/tmc/langchaingo/callbacks"
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/prompts"
-	"github.com/tmc/langchaingo/schema"
-	"github.com/tmc/langchaingo/tools"
+	"github.com/ankit-arora/langchaingo/callbacks"
+	"github.com/ankit-arora/langchaingo/llms"
+	"github.com/ankit-arora/langchaingo/prompts"
+	"github.com/ankit-arora/langchaingo/schema"
+	"github.com/ankit-arora/langchaingo/tools"
 )
 
 // agentScratchpad "agent_scratchpad" for the agent to put its thoughts in.
@@ -28,6 +28,8 @@ type OpenAIFunctionsAgent struct {
 	OutputKey string
 	// CallbacksHandler is the handler for callbacks.
 	CallbacksHandler callbacks.Handler
+	// ToolChoice controls which tool the agent can use
+	ToolChoice any
 }
 
 var _ Agent = (*OpenAIFunctionsAgent)(nil)
@@ -140,7 +142,7 @@ func (o *OpenAIFunctionsAgent) Plan(
 	}
 
 	result, err := o.LLM.GenerateContent(ctx, mcList,
-		llms.WithTools(o.tools()), llms.WithStreamingFunc(stream))
+		llms.WithTools(o.tools()), llms.WithStreamingFunc(stream), llms.WithToolChoice(o.ToolChoice))
 	if err != nil {
 		return nil, nil, nil, err
 	}

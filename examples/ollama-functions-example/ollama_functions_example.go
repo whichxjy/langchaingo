@@ -8,8 +8,8 @@ import (
 	"os"
 	"slices"
 
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/llms/ollama"
+	"github.com/ankit-arora/langchaingo/llms"
+	"github.com/ankit-arora/langchaingo/llms/ollama"
 )
 
 func main() {

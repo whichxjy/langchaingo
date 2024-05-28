@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/googleai-completion-example
+module github.com/ankit-arora/langchaingo/examples/googleai-completion-example
 
 go 1.22.0
 

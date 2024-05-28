@@ -7,11 +7,11 @@ import (
 	"log"
 	"os"
 
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/llms/anthropic"
-	"github.com/tmc/langchaingo/llms/googleai"
-	"github.com/tmc/langchaingo/llms/ollama"
-	"github.com/tmc/langchaingo/llms/openai"
+	"github.com/ankit-arora/langchaingo/llms"
+	"github.com/ankit-arora/langchaingo/llms/anthropic"
+	"github.com/ankit-arora/langchaingo/llms/googleai"
+	"github.com/ankit-arora/langchaingo/llms/ollama"
+	"github.com/ankit-arora/langchaingo/llms/openai"
 )
 
 var flagBackend = flag.String("backend", "openai", "backend to use")

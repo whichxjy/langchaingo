@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/mistral-completion-example
+module github.com/ankit-arora/langchaingo/examples/mistral-completion-example
 
 go 1.22.0
 

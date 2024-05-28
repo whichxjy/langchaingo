@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"log"
 
+	"github.com/ankit-arora/langchaingo/llms"
+	"github.com/ankit-arora/langchaingo/llms/watsonx"
 	wx "github.com/h0rv/go-watsonx/models"
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/llms/watsonx"
 )
 
 func main() {

@@ -30,8 +30,8 @@ import (
   "fmt"
   "log"
 
-  "github.com/tmc/langchaingo/llms"
-  "github.com/tmc/langchaingo/llms/openai"
+  "github.com/ankit-arora/langchaingo/llms"
+  "github.com/ankit-arora/langchaingo/llms/openai"
 )
 
 func main() {
@@ -66,6 +66,6 @@ Here are some links to blog posts and articles on using Langchain Go:
 
 # Contributors
 
-<a href="https://github.com/tmc/langchaingo/graphs/contributors">
+<a href="https://github.com/ankit-arora/langchaingo/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=tmc/langchaingo" />
 </a>

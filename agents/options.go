@@ -1,11 +1,11 @@
 package agents
 
 import (
-	"github.com/tmc/langchaingo/callbacks"
-	"github.com/tmc/langchaingo/memory"
-	"github.com/tmc/langchaingo/prompts"
-	"github.com/tmc/langchaingo/schema"
-	"github.com/tmc/langchaingo/tools"
+	"github.com/ankit-arora/langchaingo/callbacks"
+	"github.com/ankit-arora/langchaingo/memory"
+	"github.com/ankit-arora/langchaingo/prompts"
+	"github.com/ankit-arora/langchaingo/schema"
+	"github.com/ankit-arora/langchaingo/tools"
 )
 
 type Options struct {
@@ -23,6 +23,7 @@ type Options struct {
 	// openai
 	systemMessage string
 	extraMessages []prompts.MessageFormatter
+	toolChoice    any
 }
 
 // Option is a function type that can be used to modify the creation of the agents
@@ -176,5 +177,11 @@ func (o OpenAIOption) WithSystemMessage(msg string) Option {
 func (o OpenAIOption) WithExtraMessages(extraMessages []prompts.MessageFormatter) Option {
 	return func(co *Options) {
 		co.extraMessages = extraMessages
+	}
+}
+
+func (o OpenAIOption) WithToolChoice(toolChoice any) Option {
+	return func(co *Options) {
+		co.toolChoice = toolChoice
 	}
 }

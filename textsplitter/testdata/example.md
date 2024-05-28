@@ -45,13 +45,13 @@ to <travis.cline@gmail.com>.
 > If you want to ask a question, we assume that you have read the
 > available [Documentation](https://pkg.go.dev/github.com/tmc/langchaingo).
 
-Before you ask a question, it is best to search for existing [Issues](https://github.com/tmc/langchaingo/issues) that
+Before you ask a question, it is best to search for existing [Issues](https://github.com/ankit-arora/langchaingo/issues) that
 might help you. In case you have found a suitable issue and still need clarification, you can write your question in
 this issue. It is also advisable to search the internet for answers first.
 
 If you then still feel the need to ask a question and need clarification, we recommend the following:
 
-- Open an [Issue](https://github.com/tmc/langchaingo/issues/new).
+- Open an [Issue](https://github.com/ankit-arora/langchaingo/issues/new).
 - Provide as much context as you can about what you're running into.
 - Provide project and platform versions (nodejs, npm, etc), depending on what seems relevant.
 
@@ -77,7 +77,7 @@ following steps in advance to help us fix any potential bug as fast as possible.
   If you are looking for support, you might want to check [this section](#i-have-a-question)).
 - To see if other users have experienced (and potentially already solved) the same issue you are having, check if there
   is not already a bug report existing for your bug or error in
-  the [bug tracker](https://github.com/tmc/langchaingo/issues?q=label%3Abug).
+  the [bug tracker](https://github.com/ankit-arora/langchaingo/issues?q=label%3Abug).
 - Also make sure to search the internet (including Stack Overflow) to see if users outside of the GitHub community have
   discussed the issue.
 - Collect information about the bug:
@@ -95,7 +95,7 @@ following steps in advance to help us fix any potential bug as fast as possible.
 
 We use GitHub issues to track bugs and errors. If you run into an issue with the project:
 
-- Open an [Issue](https://github.com/tmc/langchaingo/issues/new). (Since we can't be sure at this point whether it is a
+- Open an [Issue](https://github.com/ankit-arora/langchaingo/issues/new). (Since we can't be sure at this point whether it is a
   bug or not, we ask you not to talk about a bug yet and not to label the issue.)
 - Explain the behavior you would expect and the actual behavior.
 - Please provide as much context as possible and describe the *reproduction steps* that someone else can follow to
@@ -125,7 +125,7 @@ community to understand your suggestion and find related suggestions.
 - Make sure that you are using the latest version.
 - Read the [documentation](https://pkg.go.dev/github.com/tmc/langchaingo) carefully and find out if the functionality is
   already covered, maybe by an individual configuration.
-- Perform a [search](https://github.com/tmc/langchaingo/issues) to see if the enhancement has already been suggested. If
+- Perform a [search](https://github.com/ankit-arora/langchaingo/issues) to see if the enhancement has already been suggested. If
   it has, add a comment to the existing issue instead of opening a new one.
 - Find out whether your idea fits with the scope and aims of the project. It's up to you to make a strong case to
   convince the project's developers of the merits of this feature. Keep in mind that we want features that will be
@@ -134,7 +134,7 @@ community to understand your suggestion and find related suggestions.
 
 #### How Do I Submit a Good Enhancement Suggestion?
 
-Enhancement suggestions are tracked as [GitHub issues](https://github.com/tmc/langchaingo/issues).
+Enhancement suggestions are tracked as [GitHub issues](https://github.com/ankit-arora/langchaingo/issues).
 
 - Use a **clear and descriptive title** for the issue to identify the suggestion.
 - Provide a **step-by-step description of the suggested enhancement** in as many details as possible.

@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/qdrant-vectorstore-example
+module github.com/ankit-arora/langchaingo/examples/qdrant-vectorstore-example
 
 go 1.22.0
 

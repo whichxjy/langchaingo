@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/redis-vectorstore-example
+module github.com/ankit-arora/langchaingo/examples/redis-vectorstore-example
 
 go 1.22.2
 

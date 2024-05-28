@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/watsonx-llm-example
+module github.com/ankit-arora/langchaingo/examples/watsonx-llm-example
 
 go 1.22.0
 

@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/openai-readme
+module github.com/ankit-arora/langchaingo/examples/openai-readme
 
 go 1.22.0
 

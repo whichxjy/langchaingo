@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/local-llm-example
+module github.com/ankit-arora/langchaingo/examples/local-llm-example
 
 go 1.22.0
 

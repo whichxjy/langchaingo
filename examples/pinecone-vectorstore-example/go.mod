@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/pinecone-vectorstore-example
+module github.com/ankit-arora/langchaingo/examples/pinecone-vectorstore-example
 
 go 1.22.0
 

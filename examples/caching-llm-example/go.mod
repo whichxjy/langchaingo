@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo/examples/caching-llm-example
+module github.com/ankit-arora/langchaingo/examples/caching-llm-example
 
 require (
 	github.com/mitchellh/go-wordwrap v1.0.1
