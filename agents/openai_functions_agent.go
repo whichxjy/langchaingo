@@ -47,6 +47,7 @@ func NewOpenAIFunctionsAgent(llm llms.Model, tools []tools.Tool, opts ...Option)
 		Tools:            tools,
 		OutputKey:        options.outputKey,
 		CallbacksHandler: options.callbacksHandler,
+		ToolChoice:       options.toolChoice,
 	}
 }
 

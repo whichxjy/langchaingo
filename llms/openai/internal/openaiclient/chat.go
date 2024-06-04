@@ -399,6 +399,14 @@ func parseStreamingChatResponse(ctx context.Context, r *http.Response, payload *
 	return combineStreamingChatResponse(ctx, payload, responseChan)
 }
 
+//{"id":"chatcmpl-123","object":"chat.completion.chunk","created":1694268190,"model":"gpt-3.5-turbo-0125", "system_fingerprint": "fp_44709d6fcb", "choices":[{"index":0,"delta":{"role":"assistant","content":""},"logprobs":null,"finish_reason":null}]}
+//
+//{"id":"chatcmpl-123","object":"chat.completion.chunk","created":1694268190,"model":"gpt-3.5-turbo-0125", "system_fingerprint": "fp_44709d6fcb", "choices":[{"index":0,"delta":{"content":"Hello"},"logprobs":null,"finish_reason":null}]}
+//
+//....
+//
+//{"id":"chatcmpl-123","object":"chat.completion.chunk","created":1694268190,"model":"gpt-3.5-turbo-0125", "system_fingerprint": "fp_44709d6fcb", "choices":[{"index":0,"delta":{},"logprobs":null,"finish_reason":"stop"}]}
+
 func combineStreamingChatResponse(ctx context.Context, payload *ChatRequest, responseChan <-chan StreamedChatResponsePayload) (*ChatCompletionResponse, error) {
 	response := ChatCompletionResponse{
 		Choices: []*ChatCompletionChoice{
@@ -418,6 +426,9 @@ func combineStreamingChatResponse(ctx context.Context, payload *ChatRequest, res
 		chunk := []byte(choice.Delta.Content)
 		response.Choices[0].Message.Content += choice.Delta.Content
 		response.Choices[0].FinishReason = choice.FinishReason
+		if len(choice.Delta.Role) > 0 {
+			response.Choices[0].Message.Role = choice.Delta.Role
+		}
 
 		if choice.Delta.FunctionCall != nil {
 			chunk = updateFunctionCall(response.Choices[0].Message, choice.Delta.FunctionCall)
@@ -427,7 +438,10 @@ func combineStreamingChatResponse(ctx context.Context, payload *ChatRequest, res
 			chunk, response.Choices[0].Message.ToolCalls = updateToolCalls(response.Choices[0].Message.ToolCalls, choice.Delta.ToolCalls)
 		}
 
-		if payload.StreamingFunc != nil {
+		if payload.StreamingFunc != nil && len(choice.Delta.ToolCalls) == 0 {
+			//stream only content and not tool calls
+			isDone := response.Choices[0].FinishReason == "stop"
+			ctx = context.WithValue(ctx, "isDone", isDone)
 			err := payload.StreamingFunc(ctx, chunk)
 			if err != nil {
 				return nil, fmt.Errorf("streaming func returned an error: %w", err)
