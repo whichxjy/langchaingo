@@ -59,13 +59,14 @@ func (o *OpenAIFunctionsAgent) tools() []llms.Tool {
 			Function: &llms.FunctionDefinition{
 				Name:        tool.Name(),
 				Description: tool.Description(),
-				Parameters: map[string]any{
-					"properties": map[string]any{
-						"__arg1": map[string]string{"title": "__arg1", "type": "string"},
-					},
-					"required": []string{"__arg1"},
-					"type":     "object",
-				},
+				Parameters:  tool.Parameters(),
+				// Parameters: map[string]any{
+				// 	"properties": map[string]any{
+				// 		"__arg1": map[string]string{"title": "__arg1", "type": "string"},
+				// 	},
+				// 	"required": []string{"__arg1"},
+				// 	"type":     "object",
+				// },
 			},
 		})
 	}
@@ -246,12 +247,12 @@ func (o *OpenAIFunctionsAgent) ParseOutput(contentResp *llms.ContentResponse) (
 			}
 
 			toolInput := toolInputStr
-			if arg1, ok := toolInputMap["__arg1"]; ok {
-				toolInputCheck, ok := arg1.(string)
-				if ok {
-					toolInput = toolInputCheck
-				}
-			}
+			// if arg1, ok := toolInputMap["__arg1"]; ok {
+			// 	toolInputCheck, ok := arg1.(string)
+			// 	if ok {
+			// 		toolInput = toolInputCheck
+			// 	}
+			// }
 			contentMsg := "\n"
 			if choice.Content != "" {
 				contentMsg = fmt.Sprintf("responded: %s\n", choice.Content)
