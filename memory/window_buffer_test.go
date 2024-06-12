@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ankit-arora/langchaingo/llms"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/whichxjy/langchaingo/llms"
 )
 
 func TestWindowBufferMemory(t *testing.T) {

@@ -3,9 +3,9 @@ package agents
 import (
 	"context"
 
-	"github.com/ankit-arora/langchaingo/llms"
-	"github.com/ankit-arora/langchaingo/schema"
-	"github.com/ankit-arora/langchaingo/tools"
+	"github.com/whichxjy/langchaingo/llms"
+	"github.com/whichxjy/langchaingo/schema"
+	"github.com/whichxjy/langchaingo/tools"
 )
 
 // Agent is the interface all agents must implement.

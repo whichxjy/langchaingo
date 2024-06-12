@@ -11,7 +11,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/ankit-arora/langchaingo/llms"
+	"github.com/whichxjy/langchaingo/llms"
 )
 
 const (

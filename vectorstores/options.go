@@ -3,8 +3,8 @@ package vectorstores
 import (
 	"context"
 
-	"github.com/ankit-arora/langchaingo/embeddings"
-	"github.com/ankit-arora/langchaingo/schema"
+	"github.com/whichxjy/langchaingo/embeddings"
+	"github.com/whichxjy/langchaingo/schema"
 )
 
 // Option is a function that configures an Options.

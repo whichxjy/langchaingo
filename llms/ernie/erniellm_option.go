@@ -1,6 +1,6 @@
 package ernie
 
-import "github.com/ankit-arora/langchaingo/callbacks"
+import "github.com/whichxjy/langchaingo/callbacks"
 
 const (
 	ernieAPIKey    = "ERNIE_API_KEY"    //nolint:gosec

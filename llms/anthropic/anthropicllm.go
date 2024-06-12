@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/ankit-arora/langchaingo/callbacks"
-	"github.com/ankit-arora/langchaingo/llms"
-	"github.com/ankit-arora/langchaingo/llms/anthropic/internal/anthropicclient"
+	"github.com/whichxjy/langchaingo/callbacks"
+	"github.com/whichxjy/langchaingo/llms"
+	"github.com/whichxjy/langchaingo/llms/anthropic/internal/anthropicclient"
 )
 
 var (

@@ -1,6 +1,6 @@
 package prompts
 
-import "github.com/ankit-arora/langchaingo/llms"
+import "github.com/whichxjy/langchaingo/llms"
 
 // Formatter is an interface for formatting a map of values into a string.
 type Formatter interface {

@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ankit-arora/langchaingo/llms/openai"
 	"github.com/stretchr/testify/require"
+	"github.com/whichxjy/langchaingo/llms/openai"
 )
 
 // nolint

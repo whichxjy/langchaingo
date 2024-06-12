@@ -6,7 +6,7 @@ import (
 	"os"
 
 	chromatypes "github.com/amikos-tech/chroma-go/types"
-	"github.com/ankit-arora/langchaingo/embeddings"
+	"github.com/whichxjy/langchaingo/embeddings"
 )
 
 const (

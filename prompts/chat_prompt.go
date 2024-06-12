@@ -3,7 +3,7 @@ package prompts
 import (
 	"fmt"
 
-	"github.com/ankit-arora/langchaingo/llms"
+	"github.com/whichxjy/langchaingo/llms"
 )
 
 var _ llms.PromptValue = ChatPromptValue{}

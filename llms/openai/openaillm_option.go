@@ -1,8 +1,8 @@
 package openai
 
 import (
-	"github.com/ankit-arora/langchaingo/callbacks"
-	"github.com/ankit-arora/langchaingo/llms/openai/internal/openaiclient"
+	"github.com/whichxjy/langchaingo/callbacks"
+	"github.com/whichxjy/langchaingo/llms/openai/internal/openaiclient"
 )
 
 const (

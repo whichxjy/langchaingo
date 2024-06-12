@@ -7,9 +7,6 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/ankit-arora/langchaingo/embeddings"
-	"github.com/ankit-arora/langchaingo/schema"
-	"github.com/ankit-arora/langchaingo/vectorstores"
 	"github.com/go-openapi/strfmt"
 	"github.com/google/uuid"
 	"github.com/weaviate/weaviate-go-client/v4/weaviate"
@@ -17,6 +14,9 @@ import (
 	"github.com/weaviate/weaviate-go-client/v4/weaviate/filters"
 	"github.com/weaviate/weaviate-go-client/v4/weaviate/graphql"
 	"github.com/weaviate/weaviate/entities/models"
+	"github.com/whichxjy/langchaingo/embeddings"
+	"github.com/whichxjy/langchaingo/schema"
+	"github.com/whichxjy/langchaingo/vectorstores"
 )
 
 var (

@@ -4,10 +4,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ankit-arora/langchaingo/schema"
 	"github.com/pkoukk/tiktoken-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/whichxjy/langchaingo/schema"
 )
 
 //nolint:dupword,funlen

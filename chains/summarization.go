@@ -1,8 +1,8 @@
 package chains
 
 import (
-	"github.com/ankit-arora/langchaingo/llms"
-	"github.com/ankit-arora/langchaingo/prompts"
+	"github.com/whichxjy/langchaingo/llms"
+	"github.com/whichxjy/langchaingo/prompts"
 )
 
 const _stuffSummarizationTemplate = `Write a concise summary of the following:

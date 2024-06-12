@@ -6,15 +6,15 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ankit-arora/langchaingo/embeddings"
-	"github.com/ankit-arora/langchaingo/llms/openai"
-	"github.com/ankit-arora/langchaingo/schema"
-	"github.com/ankit-arora/langchaingo/vectorstores"
 	"github.com/milvus-io/milvus-sdk-go/v2/client"
 	"github.com/milvus-io/milvus-sdk-go/v2/entity"
 	"github.com/stretchr/testify/require"
 	"github.com/testcontainers/testcontainers-go"
 	tcmilvus "github.com/testcontainers/testcontainers-go/modules/milvus"
+	"github.com/whichxjy/langchaingo/embeddings"
+	"github.com/whichxjy/langchaingo/llms/openai"
+	"github.com/whichxjy/langchaingo/schema"
+	"github.com/whichxjy/langchaingo/vectorstores"
 )
 
 func getEmbedder(t *testing.T) (embeddings.Embedder, error) {

@@ -5,8 +5,8 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/ankit-arora/langchaingo/embeddings"
 	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime"
+	"github.com/whichxjy/langchaingo/embeddings"
 )
 
 // Bedrock is the embedder used generate text embeddings through Amazon Bedrock.

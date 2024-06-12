@@ -36,8 +36,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/ankit-arora/langchaingo/llms"
-	"github.com/ankit-arora/langchaingo/llms/huggingface"
+	"github.com/whichxjy/langchaingo/llms"
+	"github.com/whichxjy/langchaingo/llms/huggingface"
 )
 ```
 
@@ -54,7 +54,7 @@ func main() {
 ```
 
 ### Generating Text from a Prompt
-```go 
+```go
 	ctx := context.Background()
 	prompt := "What is Golang?"
 	completion, err := llms.GenerateFromSinglePrompt(ctx, llm, prompt)
@@ -74,8 +74,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/ankit-arora/langchaingo/llms"
-	"github.com/ankit-arora/langchaingo/llms/huggingface"
+	"github.com/whichxjy/langchaingo/llms"
+	"github.com/whichxjy/langchaingo/llms/huggingface"
 )
 
 func main() {

@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"github.com/ankit-arora/langchaingo/internal/util"
+	"github.com/whichxjy/langchaingo/internal/util"
 )
 
 // NewEmbedder creates a new Embedder from the given EmbedderClient, with

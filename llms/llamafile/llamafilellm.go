@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ankit-arora/langchaingo/callbacks"
-	"github.com/ankit-arora/langchaingo/llms"
-	"github.com/ankit-arora/langchaingo/llms/llamafile/internal/llamafileclient"
+	"github.com/whichxjy/langchaingo/callbacks"
+	"github.com/whichxjy/langchaingo/llms"
+	"github.com/whichxjy/langchaingo/llms/llamafile/internal/llamafileclient"
 )
 
 var (

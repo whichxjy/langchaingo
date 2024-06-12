@@ -1,6 +1,6 @@
 package constitution
 
-import "github.com/ankit-arora/langchaingo/prompts"
+import "github.com/whichxjy/langchaingo/prompts"
 
 type constitutionalExample struct {
 	inputPrompt     string

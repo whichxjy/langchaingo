@@ -3,7 +3,7 @@ package mistral
 import (
 	"time"
 
-	"github.com/ankit-arora/langchaingo/callbacks"
+	"github.com/whichxjy/langchaingo/callbacks"
 )
 
 type clientOptions struct {

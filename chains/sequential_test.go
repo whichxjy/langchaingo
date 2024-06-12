@@ -5,11 +5,11 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/ankit-arora/langchaingo/memory"
-	"github.com/ankit-arora/langchaingo/prompts"
-	"github.com/ankit-arora/langchaingo/schema"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/whichxjy/langchaingo/memory"
+	"github.com/whichxjy/langchaingo/prompts"
+	"github.com/whichxjy/langchaingo/schema"
 )
 
 var errDummy = errors.New("boom")

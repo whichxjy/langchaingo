@@ -7,17 +7,17 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ankit-arora/langchaingo/chains"
-	"github.com/ankit-arora/langchaingo/embeddings"
-	"github.com/ankit-arora/langchaingo/llms/openai"
-	"github.com/ankit-arora/langchaingo/schema"
-	"github.com/ankit-arora/langchaingo/vectorstores"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 	"github.com/testcontainers/testcontainers-go"
 	tcweaviate "github.com/testcontainers/testcontainers-go/modules/weaviate"
 	"github.com/weaviate/weaviate-go-client/v4/weaviate/filters"
 	"github.com/weaviate/weaviate/entities/models"
+	"github.com/whichxjy/langchaingo/chains"
+	"github.com/whichxjy/langchaingo/embeddings"
+	"github.com/whichxjy/langchaingo/llms/openai"
+	"github.com/whichxjy/langchaingo/schema"
+	"github.com/whichxjy/langchaingo/vectorstores"
 )
 
 func getValues(t *testing.T) (string, string) {

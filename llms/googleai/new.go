@@ -5,9 +5,9 @@ package googleai
 import (
 	"context"
 
-	"github.com/ankit-arora/langchaingo/callbacks"
-	"github.com/ankit-arora/langchaingo/llms"
 	"github.com/google/generative-ai-go/genai"
+	"github.com/whichxjy/langchaingo/callbacks"
+	"github.com/whichxjy/langchaingo/llms"
 	"google.golang.org/api/option"
 )
 

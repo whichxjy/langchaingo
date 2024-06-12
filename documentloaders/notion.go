@@ -4,7 +4,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ankit-arora/langchaingo/schema"
+	"github.com/whichxjy/langchaingo/schema"
 )
 
 // NotionDirectoryLoader is a document loader that reads content from pages within a Notion Database.

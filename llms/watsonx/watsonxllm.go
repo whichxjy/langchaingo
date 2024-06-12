@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ankit-arora/langchaingo/callbacks"
-	"github.com/ankit-arora/langchaingo/llms"
 	wx "github.com/h0rv/go-watsonx/models"
+	"github.com/whichxjy/langchaingo/callbacks"
+	"github.com/whichxjy/langchaingo/llms"
 )
 
 var (

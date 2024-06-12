@@ -4,10 +4,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ankit-arora/langchaingo/llms"
-	"github.com/ankit-arora/langchaingo/schema"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/whichxjy/langchaingo/llms"
+	"github.com/whichxjy/langchaingo/schema"
 )
 
 func TestBufferMemory(t *testing.T) {

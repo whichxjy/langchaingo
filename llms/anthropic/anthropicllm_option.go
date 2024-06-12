@@ -1,7 +1,7 @@
 package anthropic
 
 import (
-	"github.com/ankit-arora/langchaingo/llms/anthropic/internal/anthropicclient"
+	"github.com/whichxjy/langchaingo/llms/anthropic/internal/anthropicclient"
 )
 
 const (

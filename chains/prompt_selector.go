@@ -1,8 +1,8 @@
 package chains
 
 import (
-	"github.com/ankit-arora/langchaingo/llms"
-	"github.com/ankit-arora/langchaingo/prompts"
+	"github.com/whichxjy/langchaingo/llms"
+	"github.com/whichxjy/langchaingo/prompts"
 )
 
 // PromptSelector is the interface for selecting a formatter depending on the

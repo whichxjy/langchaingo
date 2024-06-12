@@ -1,10 +1,10 @@
 package chains
 
 import (
-	"github.com/ankit-arora/langchaingo/llms"
-	"github.com/ankit-arora/langchaingo/outputparser"
-	"github.com/ankit-arora/langchaingo/prompts"
-	"github.com/ankit-arora/langchaingo/schema"
+	"github.com/whichxjy/langchaingo/llms"
+	"github.com/whichxjy/langchaingo/outputparser"
+	"github.com/whichxjy/langchaingo/prompts"
+	"github.com/whichxjy/langchaingo/schema"
 )
 
 //nolint:lll

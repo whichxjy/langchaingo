@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ankit-arora/langchaingo/jsonschema"
+	"github.com/whichxjy/langchaingo/jsonschema"
 )
 
 func TestDefinition_MarshalJSON(t *testing.T) { //nolint:funlen
@@ -158,7 +158,7 @@ func TestDefinition_MarshalJSON(t *testing.T) { //nolint:funlen
    "items":{
       "type":"string",
       "properties":{
-         
+
       }
    },
    "properties":{

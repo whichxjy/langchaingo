@@ -3,8 +3,8 @@ package outputparser
 import (
 	"strings"
 
-	"github.com/ankit-arora/langchaingo/llms"
-	"github.com/ankit-arora/langchaingo/schema"
+	"github.com/whichxjy/langchaingo/llms"
+	"github.com/whichxjy/langchaingo/schema"
 )
 
 // CommaSeparatedList is an output parser used to parse the output of an LLM as a

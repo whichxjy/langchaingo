@@ -4,8 +4,8 @@ import (
 	"context"
 	"log"
 
-	"github.com/ankit-arora/langchaingo/embeddings"
-	"github.com/ankit-arora/langchaingo/llms/openai"
+	"github.com/whichxjy/langchaingo/embeddings"
+	"github.com/whichxjy/langchaingo/llms/openai"
 )
 
 func Example() { //nolint:testableexamples

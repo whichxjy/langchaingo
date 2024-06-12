@@ -5,10 +5,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ankit-arora/langchaingo/llms"
-	"github.com/ankit-arora/langchaingo/llms/bedrock"
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime"
+	"github.com/whichxjy/langchaingo/llms"
+	"github.com/whichxjy/langchaingo/llms/bedrock"
 )
 
 func setUpTest() (*bedrockruntime.Client, error) {

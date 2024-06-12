@@ -3,7 +3,7 @@ package memory
 import (
 	"context"
 
-	"github.com/ankit-arora/langchaingo/schema"
+	"github.com/whichxjy/langchaingo/schema"
 )
 
 // Simple is a class that implement the memory interface, but does nothing.

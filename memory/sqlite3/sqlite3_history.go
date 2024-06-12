@@ -8,9 +8,9 @@ import (
 	"database/sql"
 	"strings"
 
-	"github.com/ankit-arora/langchaingo/llms"
-	"github.com/ankit-arora/langchaingo/schema"
 	_ "github.com/mattn/go-sqlite3" // sqlite3 driver.
+	"github.com/whichxjy/langchaingo/llms"
+	"github.com/whichxjy/langchaingo/schema"
 )
 
 // SqliteChatMessageHistory is a struct that stores chat messages.

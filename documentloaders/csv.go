@@ -8,8 +8,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/ankit-arora/langchaingo/schema"
-	"github.com/ankit-arora/langchaingo/textsplitter"
+	"github.com/whichxjy/langchaingo/schema"
+	"github.com/whichxjy/langchaingo/textsplitter"
 	"golang.org/x/exp/slices"
 )
 
