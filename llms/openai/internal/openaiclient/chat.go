@@ -8,6 +8,7 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
+	"os"
 	"strings"
 
 	"github.com/whichxjy/langchaingo/llms"
@@ -337,6 +338,11 @@ func (c *Client) createChat(ctx context.Context, payload *ChatRequest) (*ChatCom
 	}
 
 	c.setHeaders(req)
+
+	if os.Getenv("IS_DEBUG") != "" {
+		fmt.Printf("[Debug] req headers: %+v\n", req.Header)
+		fmt.Printf("[Debug] req body: %+v\n", string(payloadBytes))
+	}
 
 	// Send request
 	r, err := c.httpClient.Do(req)
