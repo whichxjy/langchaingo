@@ -79,6 +79,7 @@ func (o *OpenAIFunctionsAgent) Plan(
 	intermediateSteps []schema.AgentStep,
 	inputs map[string]any,
 	intermediateMessages []llms.ChatMessage,
+	opts ...llms.CallOption,
 ) ([]schema.AgentAction, *schema.AgentFinish, []llms.ChatMessage, error) {
 	fullInputs := make(map[string]any, len(inputs))
 	for key, value := range inputs {
@@ -143,8 +144,15 @@ func (o *OpenAIFunctionsAgent) Plan(
 		mcList[i] = mc
 	}
 
-	result, err := o.LLM.GenerateContent(ctx, mcList,
-		llms.WithTools(o.tools()), llms.WithStreamingFunc(stream), llms.WithToolChoice(o.ToolChoice))
+	opts = append(
+		opts,
+		llms.WithTools(o.tools()),
+		llms.WithStreamingFunc(stream),
+		llms.WithToolChoice(o.ToolChoice),
+	)
+
+	result, err := o.LLM.GenerateContent(ctx, mcList, opts...)
+
 	if err != nil {
 		return nil, nil, nil, err
 	}

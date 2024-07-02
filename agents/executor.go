@@ -38,6 +38,8 @@ func NewExecutor(agent Agent, opts ...Option) *Executor {
 		opt(&options)
 	}
 
+	// options.
+
 	return &Executor{
 		Agent:                   agent,
 		Memory:                  options.memory,
@@ -48,11 +50,14 @@ func NewExecutor(agent Agent, opts ...Option) *Executor {
 	}
 }
 
-func (e *Executor) Call(ctx context.Context, inputValues map[string]any, _ ...chains.ChainCallOption) (map[string]any, error) { //nolint:lll
+func (e *Executor) Call(ctx context.Context, inputValues map[string]any, opts ...chains.ChainCallOption) (map[string]any, error) { //nolint:lll
 	// inputs, err := inputsToString(inputValues)
 	// if err != nil {
 	//	return nil, err
 	//}
+
+	callOpts := chains.GetLLMCallOptions(opts...)
+
 	nameToTool := getNameToTool(e.Agent.GetTools())
 
 	steps := make([]schema.AgentStep, 0)
@@ -60,7 +65,7 @@ func (e *Executor) Call(ctx context.Context, inputValues map[string]any, _ ...ch
 	var err error
 	for i := 0; i < e.MaxIterations; i++ {
 		var finish map[string]any
-		steps, finish, intermediateMessages, err = e.doIteration(ctx, steps, nameToTool, inputValues, intermediateMessages)
+		steps, finish, intermediateMessages, err = e.doIteration(ctx, steps, nameToTool, inputValues, intermediateMessages, callOpts...)
 		if finish != nil || err != nil {
 			return finish, err
 		}
@@ -83,8 +88,9 @@ func (e *Executor) doIteration( // nolint
 	nameToTool map[string]tools.Tool,
 	inputs map[string]any,
 	intermediateMessages []llms.ChatMessage,
+	opts ...llms.CallOption,
 ) ([]schema.AgentStep, map[string]any, []llms.ChatMessage, error) {
-	actions, finish, newIntermediateMessages, err := e.Agent.Plan(ctx, steps, inputs, intermediateMessages)
+	actions, finish, newIntermediateMessages, err := e.Agent.Plan(ctx, steps, inputs, intermediateMessages, opts...)
 	if len(newIntermediateMessages) > 0 {
 		intermediateMessages = append(intermediateMessages, newIntermediateMessages...)
 	}

@@ -65,6 +65,7 @@ func (a *OneShotZeroAgent) Plan(
 	intermediateSteps []schema.AgentStep,
 	inputs map[string]any,
 	_ []llms.ChatMessage,
+	_ ...llms.CallOption,
 ) ([]schema.AgentAction, *schema.AgentFinish, []llms.ChatMessage, error) {
 	fullInputs := make(map[string]any, len(inputs))
 	for key, value := range inputs {
