@@ -332,7 +332,12 @@ func (c *Client) createChat(ctx context.Context, payload *ChatRequest) (*ChatCom
 	if c.baseURL == "" {
 		c.baseURL = defaultBaseURL
 	}
-	req, err := http.NewRequestWithContext(ctx, http.MethodPost, c.buildURL("/chat/completions", payload.Model), body)
+
+	suffix := "/chat/completions"
+	if os.Getenv("IS_MINIMAX") == "1" {
+		suffix = "/text/chatcompletion_v2"
+	}
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, c.buildURL(suffix, payload.Model), body)
 	if err != nil {
 		return nil, err
 	}
