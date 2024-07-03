@@ -1,6 +1,7 @@
 package agents
 
 import (
+	"encoding/json"
 	"fmt"
 	"strings"
 
@@ -60,7 +61,9 @@ func toolNames(tools []tools.Tool) string {
 func toolDescriptions(tools []tools.Tool) string {
 	var ts strings.Builder
 	for _, tool := range tools {
-		ts.WriteString(fmt.Sprintf("- %s: %s\n", tool.Name(), tool.Description()))
+		// ts.WriteString(fmt.Sprintf("- %s: %s\n", tool.Name(), tool.Description()))
+		params, _ := json.Marshal(tool.Parameters())
+		ts.WriteString(fmt.Sprintf("- name: %s, description: %s, input parameters JSON schema: %s\n", tool.Name(), tool.Description(), string(params)))
 	}
 
 	return ts.String()
