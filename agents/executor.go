@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"os"
 	"strings"
 
 	"github.com/whichxjy/langchaingo/callbacks"
@@ -125,6 +126,9 @@ func (e *Executor) doIteration( // nolint
 	}
 	for _, stepStream := range stepStreams {
 		agentStepWithError := <-stepStream
+		if os.Getenv("IS_DEBUG") == "1" {
+			fmt.Printf("[step] => %+v\n", agentStepWithError)
+		}
 		if agentStepWithError.Error != nil {
 			return steps, nil, intermediateMessages, agentStepWithError.Error
 		}
