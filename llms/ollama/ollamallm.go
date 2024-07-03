@@ -109,12 +109,15 @@ func (o *LLM) GenerateContent(ctx context.Context, messages []llms.MessageConten
 		Messages: chatMsgs,
 		Options:  ollamaOptions,
 		Stream:   func(b bool) *bool { return &b }(opts.StreamingFunc != nil),
-		System:   o.options.system,
 	}
 
 	keepAlive := o.options.keepAlive
 	if keepAlive != "" {
 		req.KeepAlive = keepAlive
+	}
+
+	if o.options.system != "" {
+		req.System = o.options.system
 	}
 
 	var fn ollamaclient.ChatResponseFunc
