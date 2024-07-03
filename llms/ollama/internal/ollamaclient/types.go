@@ -52,6 +52,7 @@ type ChatRequest struct {
 	Stream    *bool      `json:"stream,omitempty"`
 	Format    string     `json:"format"`
 	KeepAlive string     `json:"keep_alive,omitempty"`
+	System    string     `json:"system"`
 
 	Options Options `json:"options"`
 }
